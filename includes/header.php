@@ -16,13 +16,13 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="http://localhost/Blog-CMS-master/">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="http://localhost/Blog-CMS/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo 'http://localhost/Blog-CMS-master/Articles.php' ?>">Articles</a>
+                        <a class="nav-link" href="<?php echo 'http://localhost/Blog-CMS/Articles.php' ?>">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/Blog-CMS-master/Contact.php" >Contact</a>
+                        <a class="nav-link" href="http://localhost/Blog-CMS/Contact.php" >Contact</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
