@@ -14,11 +14,14 @@
        mysqli_close($conn);
 
 ?>
+
 <?php require_once 'includes/header.php' ?>
 
 <section style="background:linear-gradient(rgba(0, 0, 50,0.3),rgba(0, 0, 50,0.3)),url(img/img3.jpg);" class="d-flex flex-column justify-content-around align-items-center">
         <br>
         <br>
+        <br>
+        <a href="mysql/logout.php" class= "text-light btn btn-danger">LOG OUT</a>
         <br>
             <h1 class= "text-light">Articles</h1>
 
