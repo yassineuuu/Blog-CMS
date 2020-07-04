@@ -1,5 +1,5 @@
 <?php require_once 'connect.php';
-
+    session_start();
     $UserName=$_POST['User'];
     $Password=$_POST['Password'];
 
@@ -11,7 +11,8 @@
      $line= mysqli_num_rows($result);
 
      if($line==1){
-         header('location:../Articles.php');
+        $_SESSION['UserName']=$UserName;
+         header('location:../views/adminArticles.php');
      }else{
         echo 'password required';
      }

@@ -2,7 +2,7 @@
 
 
        // creat SQL query
-       $query= 'SELECT*FROM login ORDER BY date DESC';
+       $query= 'SELECT*FROM articles ORDER BY Date DESC';
        // get the result of the query
        $result= mysqli_query($conn, $query);
        // fetch data
@@ -21,7 +21,6 @@
         <br>
         <br>
         <br>
-        <a href="mysql/logout.php" class= "text-light btn btn-danger">LOG OUT</a>
         <br>
             <h1 class= "text-light">Articles</h1>
 
@@ -34,7 +33,7 @@
                 <h3 class= "text-center"><?php echo $post['Title'] ?></h3>
                 <br>
                 <br>
-                <p class= "text-center px-4"><?php echo $post['Texte'] ?></p>
+                <p class= "text-center px-4"><?php echo $post['Text'] ?></p>
             </div>
             
     <?php endforeach; ?>

@@ -17,7 +17,7 @@
      if($line==1){
          echo "User Name already exist ";
      }else{
-        $register="INSERT INTO `login`(`id`, `UserName`, `E-mail`, `Password`, `Title`, `Texte`, `Date`) VALUES ('','$User', '$Email','$Pass','','',CURRENT_TIMESTAMP)";
+        $register="INSERT INTO `login`(`UserName`, `Email`, `Password`) VALUES ('$User','$Email','$Pass')";
         mysqli_query($conn, $register);
         echo "Registration success";
      }
