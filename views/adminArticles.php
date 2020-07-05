@@ -1,22 +1,13 @@
 <?php require_once '../mysql/connect.php';
 
-       // creat SQL query
-       $query= 'SELECT*FROM articles ORDER BY Date DESC';
-       // get the result of the query
-       $result= mysqli_query($conn, $query);
-       // fetch data
-       $posts= mysqli_fetch_all($result, MYSQLI_ASSOC);
-       // var_dump($posts);
-       // free result
-       mysqli_free_result($result);
-       // close connection
-       mysqli_close($conn);
+       
 
 ?>
 
 <?php 
 require_once '../includes/adminHeader.php';
 require_once '../mysql/posts.php';
+require_once '../mysql/deletPost.php';
 
  ?>
 
@@ -57,7 +48,11 @@ require_once '../mysql/posts.php';
                         <div class='col-10 alert alert-info'>
                             <div class="d-flex flex-row justify-content-between">
                                 <a href="http://localhost/Blog-CMS/views/adminUpdate.php?id=<?php echo $post['id']?>" class= "text-light btn btn-info">Modifier</a>
-                                <a href="../" class= "text-light btn btn-danger">Supprimer</a>
+                                
+                                <form method='POST' action="../mysql/deletPost.php">
+                                    <input type="hidden" name="delete_id" value='<?php echo $post['id']?>'>
+                                    <input type="submit" name="delete" value='Supprimer' class= "text-light btn btn-danger">
+                                </form>
                             </div>
 
                             <h3 class= "text-center"><?php echo $post['Title'] ?></h3>

@@ -1,7 +1,7 @@
 <?php 
-     require_once '../mysql/update.php';
+ 
 
-
+require_once '../mysql/update.php';
 require_once '../includes/adminHeader.php';
 
  ?>
@@ -21,7 +21,7 @@ require_once '../includes/adminHeader.php';
                 <label for="article" class= "text-light">Article</label>
                 <textarea class="form-control" name='Text' id="article" cols="30" rows="10"><?php echo $post['Text'] ?></textarea>
             </div>
-            <input type="text" name="update_id" value='<?php echo $update_id ?>'>
+            <input type="text" name="update_id" value='<?php echo $post['id'] ?>'>
             <button type="submit" name='sub' class="btn btn-primary">Modifier</button>
     </form>
 </section>
